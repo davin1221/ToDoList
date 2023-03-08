@@ -1,0 +1,221 @@
+*{
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #F7EDE2;
+}
+
+#wrap{
+    height: 100vh;
+    display: flex;
+    align-items: center;    
+}
+
+#container{
+    margin: auto;
+    width: 500px;   
+    height: 600px;
+    border-top: 5px solid #F6BD60;
+    border-bottom: 5px solid #F6BD60;
+    padding: 10px;
+}
+
+#container > h1 {
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* input 박스 */
+
+#input-box{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    margin: 20px 0px 20px 0px;
+}
+
+.form{
+    width: 50%;
+    position: relative;
+    height: 50px;
+    overflow: hidden;
+}
+
+.form input{
+    width: 100%;
+    height: 100%;
+    padding-top: 20px;
+    border: none;
+    background-color: transparent;
+}
+
+.form input:focus{
+    outline: none;
+    color: #F28482;
+}
+
+.form label{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+
+    border-bottom: 1px solid grey;
+    color: grey;
+    
+}
+
+.form label::after{
+    content: "";
+    position: absolute;
+    left: 0px;
+    bottom: -1px;
+    height: 100%;
+    width: 100%;
+    border-bottom: 3px solid #F28482;
+
+    transform: translateX(-100%);
+
+    transition: transform all 0.3s ease;
+}
+
+.content-name{
+    position: absolute;
+    bottom: 5px;
+    left: 0px;
+    transition: all 0.3s ease;
+}
+
+.form input:focus + .label-name .content-name,
+.form input:valid + .label-name .content-name {
+    transform: translateY(-150%);
+    font-size: 14px;
+    color: #F28482;
+}
+
+.form input:focus + .label-name::after,
+.form input:valid + .label-name::after{
+    transform: translateX(0%);
+}
+
+
+/* 버튼 */
+#add-button{
+    background-color: #F5CAC3;
+    border: none;
+    border-radius: 10px;
+    height: 30px;
+    width: 30px;
+    margin-left: 10px;
+    bottom: 0px;
+    cursor: pointer;
+}
+
+#add-button:hover{
+    transform: scale(1.1);
+}
+
+.buttons{
+    background-color: transparent;
+    border: none;
+}
+
+/* ------------ */
+
+h1{
+    color: #84A59D;
+}
+
+#under-line{
+    position: absolute;
+    background-color: #F28482;
+    height: 3px;
+    transition: 0.3s;  
+}
+
+.tabs-area{
+    /* border: 1px solid purple; */
+    background-color: #F5CAC3;
+    padding: 10px;
+}
+
+.task-tabs{    
+    display: flex;
+    justify-content: space-evenly;
+    color: #84A59D;
+}
+
+.task-tabs > div {
+    cursor: pointer;
+}
+
+.task-tabs > div:hover{
+    color: #F28482;
+}
+
+.task-tabs > div::after{
+    color: #F28482;
+}
+
+
+.task{
+    background-color: #F7EDE2;
+    border-bottom: 1px solid #F28482;
+    color: grey;
+    height: 40px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.task > span:nth-child(1){
+    flex-basis: 15%;
+    text-align: center;
+}
+.task > span:nth-child(2){
+    margin: 0px 20px 0px 20px;
+    flex-basis: 85%;
+    padding: 5px;
+}
+.task > span:nth-child(3){
+    flex-basis: 10%;
+}
+
+.doneStyle{
+    text-decoration: line-through;
+    color: wheat;
+}
+
+.fa-plus{
+    color: gray;
+}
+
+.fa-trash-can{
+    color: gray;
+}
+.fa-trash-can:hover{
+    color: #F28482;
+    transform: scale(1.1);
+}
+
+.fa-square{
+    color: gray;
+}
+
+.fa-square:hover{
+    color: #84A59D;
+    transform: scale(1.1);
+}
+
+.fa-square-check{
+    color: #84A59D;
+    transform: scale(1.1);
+}
+
+i{
+    cursor: pointer;
+}

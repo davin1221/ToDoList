@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To DO List</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/069a8eb008.js" crossorigin="anonymous"></script> 
+</head>
+<body>
+    <!-- 
+        <i class="fa-regular fa-square"></i>  네모 
+        <i class="fa-regular fa-square-check"></i> 네모 체크 
+        <i class="fa-regular fa-trash-can"></i> 쓰레기통1
+        <i class="fa-solid fa-trash-can"></i> 쓰레기통2
+        <i class="fa-regular fa-square-plus"></i> 네모 플러스 
+        <i class="fa-solid fa-plus"></i> 그냥 플러스 
+
+
+     -->
+
+    <section id="wrap">
+        <div id="container">
+            <h1>Today's To Do List</h1>
+            
+            <div id="input-box">
+                <div class = "form">
+                    <input type = "text" name = "todo" id = "user-input" autocomplete = "off" onkeypress="inputEnter()" required>
+                    <label for="todo" class = "label-name">
+                        <span class="content-name">오늘 할 일은?</span>
+                    </label>
+                </div>
+                    <button id = "add-button"><i class="fa-solid fa-plus"></i></button>
+            </div>
+
+            <div class="box-align">
+                <div class="task-container">
+                    <div class="tabs-area">
+                        <div class="task-tabs">
+                            <div id = "under-line"></div>
+                            <div id = "all">ALL</div>
+                            <div id = "not-done">Not Done</div>
+                            <div id = "done">Done</div>
+                        </div>
+                    </div>
+                    
+                    <div id = "task-board">
+                        <!-- <div class="task">
+                            <span><i class="fa-regular fa-square"></i></span>
+                            <span>할일~</span>
+                            <span><i class="fa-regular fa-trash-can"></i></span>
+                        </div> -->
+    
+                    </div>
+                </div> 
+            </div>
+
+        </div>  <!-- container end -->
+        
+       
+    </section>
+    
+    
+
+
+    <script src="/main.js"></script>
+</body>
+</html>
